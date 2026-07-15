@@ -1,0 +1,30 @@
+name: SaVur
+options:
+  bundleIdPrefix: com.matthewpark
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+targets:
+  SaVur:
+    type: application
+    platform: iOS
+    sources:
+      - SaVur
+    info:
+      path: SaVur/Info.plist
+      properties:
+        CFBundleDisplayName: SaVur
+        UILaunchScreen: {}
+        UIUserInterfaceStyle: Light
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: SaVur uses the camera so you can capture your organic food on the spot.
+    settings:
+      base:
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: false
+        ENABLE_PREVIEWS: true
