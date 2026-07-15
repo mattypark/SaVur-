@@ -6,6 +6,18 @@ options:
   createIntermediateGroups: true
 
 targets:
+  SaVurTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - SaVurTests
+    dependencies:
+      - target: SaVur
+    settings:
+      base:
+        SWIFT_VERSION: "5.0"
+        GENERATE_INFOPLIST_FILE: true
+
   SaVur:
     type: application
     platform: iOS

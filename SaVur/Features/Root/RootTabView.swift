@@ -1,6 +1,9 @@
 import SwiftUI
+import SwiftData
 
 struct RootTabView: View {
+    @Environment(\.modelContext) private var modelContext
+
     private enum Tab {
         case friends
         case capture
@@ -29,6 +32,11 @@ struct RootTabView: View {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
                 .tag(Tab.profile)
+        }
+        .task {
+            #if DEBUG
+            DebugSeeder.seedIfRequested(context: modelContext)
+            #endif
         }
     }
 }

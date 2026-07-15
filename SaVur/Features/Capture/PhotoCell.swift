@@ -1,8 +1,9 @@
 import SwiftUI
 
-/// One photo in the weekly strip. Rounded Retro-style card.
+/// One photo in a weekly strip. Rounded Retro-style card.
 struct PhotoCell: View {
     let photo: FoodPhoto
+    var size: CGSize = Theme.stripPhotoSize
 
     @State private var image: UIImage?
 
@@ -20,7 +21,7 @@ struct PhotoCell: View {
                     }
             }
         }
-        .frame(width: Theme.stripPhotoSize.width, height: Theme.stripPhotoSize.height)
+        .frame(width: size.width, height: size.height)
         .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadius))
         .overlay {
             RoundedRectangle(cornerRadius: Theme.cornerRadius)

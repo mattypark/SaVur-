@@ -51,12 +51,12 @@ struct ProfileView: View {
         }
     }
 
-    /// Placeholder counts until the backend stage.
+    /// Friends count is a placeholder until the backend stage.
     private var statsRow: some View {
         HStack(spacing: 32) {
             stat(value: "\(photos.count)", label: "Photos")
             stat(value: "0", label: "Friends")
-            stat(value: "0", label: "Weeks")
+            stat(value: "\(Set(photos.map(\.weekStart)).count)", label: "Weeks")
         }
     }
 

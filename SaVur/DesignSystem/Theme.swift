@@ -27,4 +27,5 @@ enum Theme {
 
     static let cornerRadius: CGFloat = 18
     static let stripPhotoSize = CGSize(width: 132, height: 176)
+    static let pastStripPhotoSize = CGSize(width: 96, height: 128)
 }
